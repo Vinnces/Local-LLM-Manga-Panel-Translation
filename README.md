@@ -1,4 +1,4 @@
-# Manga Panel Translate
+# Local LLM Manga Panel Translation
 
 A Chrome extension and local Python service for translating Japanese manga into English using a local LLM. The extension finds the main manga image on the current page and sends the full image to the local service, including parts outside the visible browser window. English labels appear beside the Japanese text, and a numbered list shows both languages for review.
 
