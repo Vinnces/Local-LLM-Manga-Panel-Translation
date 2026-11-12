@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Manga Panel Translate",
+  "version": "0.1.0",
+  "description": "Auto-detect manga panels on a page (or drag a rectangle over one), OCR + translate via the local service, and show inline English labels beside each bubble.",
+  "permissions": ["activeTab", "tabs", "scripting"],
+  "host_permissions": ["http://127.0.0.1:8765/*"],
+  "optional_host_permissions": ["https://*/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Translate manga page",
+    "default_popup": "popup.html"
+  }
+}

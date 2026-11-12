@@ -1,0 +1,236 @@
+.manga-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483646;
+  cursor: crosshair;
+}
+
+.manga-box {
+  position: fixed;
+  border: 2px solid #e91e63;
+  background: rgba(233, 30, 99, 0.15);
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.manga-panel {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 2147483647;
+  width: 340px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: #222222;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  padding: 10px 12px;
+  font-family: system-ui, "Segoe UI", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.manga-panel-header {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.manga-panel-status {
+  color: #555555;
+}
+
+.manga-line {
+  border-top: 1px solid #eeeeee;
+  padding: 6px 0;
+}
+
+.manga-line:first-of-type {
+  border-top: none;
+}
+
+.manga-id {
+  display: inline-block;
+  min-width: 26px;
+  font-weight: 700;
+  color: #e91e63;
+}
+
+.manga-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 5px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.manga-garbled {
+  background: #d32f2f;
+  color: #ffffff;
+}
+
+.manga-question {
+  background: #1976d2;
+  color: #ffffff;
+}
+
+.manga-en {
+  margin: 4px 0 2px 32px;
+}
+
+.manga-empty {
+  color: #888888;
+  font-style: italic;
+}
+
+.manga-ja {
+  margin-left: 32px;
+  color: #666666;
+  font-size: 12px;
+}
+
+.manga-close {
+  float: right;
+  margin-top: 8px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  color: #888888;
+}
+
+.manga-inline-root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  z-index: 2147483645;
+  pointer-events: none;
+}
+
+.manga-box-hl {
+  position: absolute;
+  border: 1px solid rgba(233, 30, 99, 0.85);
+  background: rgba(233, 30, 99, 0.1);
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.manga-label {
+  position: absolute;
+  max-width: 220px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 4px 6px;
+  font-family: system-ui, "Segoe UI", sans-serif;
+  font-size: 12px;
+  line-height: 1.3;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.manga-label-en {
+  color: #222222;
+}
+
+.manga-candidate {
+  position: absolute;
+  border: 2px dashed rgba(25, 118, 210, 0.9);
+  background: rgba(25, 118, 210, 0.08);
+  cursor: pointer;
+  pointer-events: auto;
+  box-sizing: border-box;
+}
+
+.manga-candidate:hover {
+  border-color: #1976d2;
+  background: rgba(25, 118, 210, 0.2);
+}
+
+.manga-candidate-active {
+  animation: mangaPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes mangaPulse {
+  0%,
+  100% {
+    border-color: #1976d2;
+    background: rgba(25, 118, 210, 0.12);
+  }
+  50% {
+    border-color: #e91e63;
+    background: rgba(233, 30, 99, 0.22);
+  }
+}
+
+.manga-toolbar {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(34, 34, 34, 0.92);
+  border-radius: 6px;
+  padding: 5px 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  font-family: system-ui, "Segoe UI", sans-serif;
+}
+
+.manga-auto-btn {
+  border: none;
+  background: #1976d2;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.manga-auto-btn:hover:not(:disabled) {
+  background: #1565c0;
+}
+
+.manga-auto-btn:disabled {
+  background: #555555;
+  cursor: default;
+}
+
+.manga-tool-status {
+  color: #dddddd;
+  font-size: 12px;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.manga-label-ja {
+  color: #666666;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.manga-hint {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  z-index: 2147483647;
+  background: rgba(34, 34, 34, 0.92);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-family: system-ui, "Segoe UI", sans-serif;
+  font-size: 13px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
